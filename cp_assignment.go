@@ -59,7 +59,7 @@ func main() {
 			continue
 		}
 		log.Println("Connected to ", conn.RemoteAddr())
-		if _, err := conn.Write([]byte("Connected with the server...\nIn order to search write query in json format like this:\nUsage: {query:{region:sindh}}    !enclose each word in double qoutes!")); err != nil {
+		if _, err := conn.Write([]byte("Connected with the server...\nIn order to search write query in json format like this:\nUsage: {query:{region:sindh}}    !enclose each word in double qoutes!\n")); err != nil {
 			log.Println("Error writing:", err)
 			conn.Close()
 			continue
