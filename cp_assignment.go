@@ -95,7 +95,7 @@ func handleConnection(conn net.Conn, records []data) {
 		rsp.Response = findData(records, req.Query.Region, req.Query.Date)
 
 		// encode result to JSON array
-		enc.SetIndent("", "\t")
+		enc.SetIndent("", "  ")
 		if err := enc.Encode(&rsp); err != nil {
 			log.Println("failed to encode data:", err)
 			return
