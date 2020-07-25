@@ -143,7 +143,7 @@ func readCsvFile(filePath string) []data {
 	}
 
 	var _data data
-	var dataArray []data
+	dataArray := make([]data, 0)
 	for _, each := range records {
 
 		_data.Positive = each[0]
